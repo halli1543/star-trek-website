@@ -1,4 +1,4 @@
-@import 'varibles';
+@import 'variables';
 
 @import url('https://fonts.googleapis.com/css2?family=inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap');
 * {
@@ -26,7 +26,7 @@ h1, h2, h3, h4, h5, h6 {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: $box-shadow;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .btn-login {
-        background: linear-gradient(135deg, $primary-color, darken($primary-color, 10%));
+        
         color: white;
         padding: 0.6rem 1.4rem;
         border-radius: 50px;
@@ -58,7 +58,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-section {
-    background: linear-gradient(135deg, rgba($secondary-color, 0.1),rgba($primary-color 0.1));
+    background: linear-gradient(135deg, rgba($secondary-color, 0.1), rgba($primary-color, 0.1));
     text-align: center;
     padding: 6rem 1rem;
 
