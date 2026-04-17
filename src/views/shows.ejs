@@ -1,7 +1,7 @@
 <% shows.forEach(show => { %>
     <div>
-      <a href="/shows/<%= show.id%>"><%= show.title %></a>
+      <a href="/shows/<%= show.id %>"><%= show.title %></a>
       <span><%= show.year %></span>
-      <span><&= show.seasons %> seasons</span>
+      <span><%= show.seasons %> seasons</span>
     </div>
 <% }) %>
