@@ -6,9 +6,12 @@
 <body>
     <%- include('partials/header') %>
     <h1><%= show.title %></h1>
-    <p>years aired; <%= show.year %></p>
+    <p>years aired: <%= show.year %></p>
     <p>seasons: <%= show.seasons %></p>
     <p><%= show.description %></p>
+    <p><%= show.captain %></p>
+    <p><%= show.episodes %></p>
+    <p><%= show.characters %></p>
     <a href="/shows">back to all shows</a>
     <%- include('partials/footer') %>
 </body>

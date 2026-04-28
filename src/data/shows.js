@@ -4,7 +4,7 @@ const shows = [
         title: 'The Original Series', 
         year: '1966-1969', 
         seasons: 3,
-        description: 'captian kirk banging every allien he can find, scotty fixing something, and McCoy being racist to spock.',
+        description: 'captian kirk fucking every allien he can find, scotty fixing something, and McCoy being racist to spock.',
         captain: 'James T. Kirk',
         characters: require('./characters/tos'),
         episodes: require('./episodes/tos')
@@ -34,7 +34,7 @@ const shows = [
         title: 'Voyager', 
         year: '1995-2001', 
         seasons: 7,
-        description: 'Janeway drinking her tenth cup of coffe, Chakotay saying something spiritual, and kim being an ensing,',
+        description: 'Janeway drinking her tenth cup of coffe today, Chakotay saying something spiritual, and kim being an ensing,',
         captain: 'Kathryn Janeway',
         characters: require('./characters/voy'),
         episodes: require('./episodes/voy')
@@ -64,7 +64,7 @@ const shows = [
         title: 'Strange New Worlds', 
         year: '2022-present', 
         seasons: 3,
-        description: 'pike having the best hair in star trek, MBenga being second best dad, spock banging chapel.',
+        description: 'pike having the best hair in star trek, MBenga being second best dad, spock fucking chapel.',
         captain: 'Christopher Pike',
         characters: require('./characters/snw'),
         episodes: require('./episodes/snw')
