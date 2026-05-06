@@ -25,7 +25,13 @@ exports.getShowById = (req, res, next) => {
             return res.status(404).render('404', { title: 'show not found'});
         }
 
-        res.render('show', { title: show.title, show});
+         const episodesBySeason = show.episodes.reduce((acc, ep) => {
+            if (!acc[ep.season]) acc[ep.season] = [];
+            acc[ep.season].push(ep);
+            return acc;
+        }, {});
+
+        res.render('show', { title: show.title, show, episodesBySeason });
     } catch (err) {
         next(err);
     }

@@ -9,9 +9,26 @@
     <p>years aired: <%= show.year %></p>
     <p>seasons: <%= show.seasons %></p>
     <p><%= show.description %></p>
-    <p><%= show.captain %></p>
-    <p><%= show.episodes %></p>
-    <p><%= show.characters %></p>
+<% if (show.characters && show.characters.length > 0) { %>
+  <h2>Characters</h2>
+  <ul>
+    <% show.characters.forEach(c => { %>
+      <li><strong><%= c.name %></strong> — <%= c.rank %>, <%= c.role %> (<%= c.actor %>)</li>
+    <% }) %>
+  </ul>
+<% } %>
+
+<% if (Object.keys(episodesBySeason).length > 0) { %>
+  <h2>Episodes</h2>
+  <% Object.entries(episodesBySeason).forEach(([season, episodes]) => { %>
+    <h3>Season <%= season %></h3>
+    <ul>
+      <% episodes.forEach(ep => { %>
+        <li><strong>Ep <%= ep.episode %>:</strong> <%= ep.title %> <em>(<%= ep.releasedate %>)</em> — <%= ep.description %></li>
+      <% }) %>
+    </ul>
+  <% }) %>
+<% } %>
     <a href="/shows">back to all shows</a>
     <%- include('partials/footer') %>
 </body>
