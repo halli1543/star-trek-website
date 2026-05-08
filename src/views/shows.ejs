@@ -4,6 +4,9 @@
       <a href="/shows/<%= show.id %>"><%= show.title %></a>
       <span><%= show.year %></span>
       <span><%= show.seasons %> seasons</span>
+      <% if (show.image) { %>
+  <img src="<%= show.image %>" alt="<%= show.title %>">
+<% } %>
     </div>
 <% }) %>
 <%- include('partials/footer') %>
