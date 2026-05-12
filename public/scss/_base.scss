@@ -1,0 +1,43 @@
+// _base.scss
+@use 'variables' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Exo+2:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $bg-color;
+  font-family: $font-primary;
+  font-family: $font-body;
+  color: $text-primary;
+}
+h1, h2, h3 {
+  font-family: $font-primary;
+}
+
+
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.5rem;
+  border-radius: 999px;        // ← makes it a pill/round shape
+  border: 2px solid $card-border;
+  background: $card-bg;
+  color: $text-primary;
+  font-family: $font-primary;
+  font-size: 0.85rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    background: $card-border;
+    border-color: $card-hover-border;
+  }
+}

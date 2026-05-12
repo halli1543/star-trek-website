@@ -9,37 +9,32 @@
     <p>years aired: <%= show.year %></p>
     <p>seasons: <%= show.seasons %></p>
     <p><%= show.description %></p>
-<% if (show.characters && show.characters.length > 0) { %>
-  <h2>Characters</h2>
-  <ul>
-    <% show.characters.forEach(c => { %>
-      <li><strong><%= c.name %></strong> — <%= c.rank %>, <%= c.role %> (<%= c.actor %>)</li>
-    <% }) %>
-  </ul>
-<% } %>
 
-<% if (Object.keys(episodesBySeason).length > 0) { %>
-  <h2>Episodes</h2>
-  <% Object.entries(episodesBySeason).forEach(([season, episodes]) => { %>
-    <h3>Season <%= season %></h3>
-    <ul>
-      <% episodes.forEach(ep => { %>
-        <li><strong>Ep <%= ep.episode %>:</strong> <%= ep.title %> <em>(<%= ep.releaseDate %>)</em> — <%= ep.description %></li>
-      <% }) %>
-    </ul>
-  <% }) %>
-<% } %>
-
-gi<% shows.forEach(show => { %>
-  <a href="/shows/<%= show.id %>">
     <% if (show.image) { %>
-      <img src="<%= show.image %>" alt="<%= show.title %>">
+        <img src="<%= show.image %>" alt="<%= show.title %>">
     <% } %>
-    <h2><%= show.title %></h2>
-  </a>
-<% }) %>
 
-<a href="/shows">back to all shows</a>
-<%- include('partials/footer') %>
+    <% if (show.characters && show.characters.length > 0) { %>
+        <h2>Characters</h2>
+        <ul>
+            <% show.characters.forEach(c => { %>
+                <li><strong><%= c.name %></strong> — <%= c.rank %>, <%= c.role %> (<%= c.actor %>)</li>
+            <% }) %>
+        </ul>
+    <% } %>
+
+    <% if (Object.keys(episodesBySeason).length > 0) { %>
+        <h2>Episodes</h2>
+        <% Object.entries(episodesBySeason).forEach(([season, episodes]) => { %>
+            <h3>Season <%= season %></h3>
+            <ul>
+                <% episodes.forEach(ep => { %>
+                    <li><strong>Ep <%= ep.episode %>:</strong> <%= ep.title %> <em>(<%= ep.releaseDate %>)</em> — <%= ep.description %></li>
+                <% }) %>
+            </ul>
+        <% }) %>
+    <% } %>
+    <a href="/shows" class="btn">back to all shows</a>
+    <%- include('partials/footer') %>
 </body>
 </html>

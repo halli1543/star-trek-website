@@ -1,12 +1,17 @@
 <%- include('partials/header') %>
-<% shows.forEach(show => { %>
-    <div>
-      <a href="/shows/<%= show.id %>"><%= show.title %></a>
-      <span><%= show.year %></span>
-      <span><%= show.seasons %> seasons</span>
+
+<div class="shows-grid">
+  <% shows.forEach(show => { %>
+    <a href="/shows/<%= show.id %>" class="show-card">
       <% if (show.image) { %>
-  <img src="<%= show.image %>" alt="<%= show.title %>">
-<% } %>
-    </div>
-<% }) %>
+        <img class="show-card__image" src="<%= show.image %>" alt="<%= show.title %>">
+      <% } %>
+      <div class="show-card__body">
+        <h3 class="show-card__title"><%= show.title %></h3>
+        <p class="show-card__meta"><%= show.year %> · <%= show.seasons %> seasons</p>
+      </div>
+    </a>
+  <% }) %>
+</div>
+
 <%- include('partials/footer') %>

@@ -1,11 +1,19 @@
-$primary-color: #ff6b6b;
-$secondary-color: #4ecdc4;
-$accent-color: #ffe66d;
-$text-dark: #2d3436;
-$text-light: #f5f6fa;
-$bg-color: #fdfdfd;
-$nav-bg: rgba(255, 255, 255, 0.95);
 
-$font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-$font-heading: 'Outfit', sans-serif;
-$hover-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+// Colors
+$card-bg: #0a0e1a;
+$card-border: #1e3a5f;
+$card-hover-border: #4a9eff;
+$text-primary: #e8f4ff;
+$text-secondary: #7a9bb5;
+$bg-color: #050810;
+
+// Card
+$card-radius: 8px;
+$card-shadow: 0 4px 20px rgba(0, 150, 255, 0.15);
+
+// Nav
+$btn-home-size: 48px;
+
+$font-primary: 'Orbitron', sans-serif;  // sci-fi Star Trek feel
+$font-body: 'Exo 2', sans-serif;         // body text
